@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide — All 55 Trophies, Tracker, Roadmap &amp; Spoiler Mode</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Single-player &middot; 19 November 2026</p>
+  <h1>GTA VI Trophy Guide</h1>
+  <p class="sub">All 55 trophies: a checklist that saves, a step-by-step guide for each one, a platinum roadmap and a spoiler mode. Works fully offline.</p>
+  <div class="progress-wrap" aria-label="Trophy progress">
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+    <p id="progress-text">0 of 55 earned &middot; 0%</p>
+  </div>
+  <p class="counts" id="grade-counts"></p>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button id="tab-list" type="button" class="tab active">Trophy list</button>
+  <button id="tab-roadmap" type="button" class="tab">Roadmap to Platinum</button>
+</nav>
+
+<div class="toolbar">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy name or mission…"></label>
+  <label>Grade
+    <select id="grade-filter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <div class="kinds" id="kind-filters" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="chip active">All</button>
+    <button type="button" data-kind="story" class="chip">Story</button>
+    <button type="button" data-kind="missable" class="chip">Missable</button>
+    <button type="button" data-kind="collectible" class="chip">Collectibles</button>
+    <button type="button" data-kind="activity" class="chip">Activities</button>
+    <button type="button" data-kind="online" class="chip">Online</button>
+  </div>
+  <label class="check"><input id="earned-only" type="checkbox"> Earned only</label>
+  <label class="check spoiler-check"><input id="spoiler-toggle" type="checkbox"> Spoiler mode: hide story trophies</label>
+  <button id="export-btn" type="button">Export progress</button>
+  <label class="import-btn">Import progress <input id="import-file" type="file" accept="application/json"></label>
+</div>
+
+<p class="totals-strip" style="margin: 14px 24px 0; padding: 10px 14px; background: #1a1426; border: 1px solid #22d3ee; border-left: 4px solid #ff2e88; border-radius: 8px; font-size: 16px; font-weight: 700;">55 trophies &mdash; 1 Platinum &middot; 2 Gold &middot; 6 Silver &middot; 46 Bronze &middot; 28 hidden &middot; 0 online</p>
+
+<p class="missable-banner" id="missable-banner"><strong>Possibly missable: Positive Mental Attitude.</strong> PowerPyx flags the Chapter 1 balcony meditation at Jason&rsquo;s house; it may be required and it is gone after Chapter 1. Push Square lists no missable trophies. Do the balcony meditation in Chapter 1 and keep a manual save. Details in the trophy&rsquo;s guide below.</p>
+
+<main>
+  <section id="view-list" aria-label="Trophy list">
+    <p id="empty-note" class="empty" hidden></p>
+    <ul id="trophy-list" class="cards"></ul>
+    <p id="list-note" class="note"></p>
+  </section>
+
+  <section id="view-roadmap" aria-label="Roadmap to the Platinum" hidden></section>
+
+  <section id="detail" aria-label="Trophy detail" hidden>
+    <button id="detail-close" type="button">&larr; Back to the list</button>
+    <div id="detail-body"></div>
+  </section>
+</main>
+
+<footer>
+  <h2>About this guide</h2>
+  <p>Trophy names, descriptions and grades as published by Exophase, PowerPyx, GTABase and PSNProfiles; Rockstar has published no official trophy list. The guides are written in the author&rsquo;s own words and cite their sources; they do not copy guide text. Two secret trophies are still unconfirmed: Bad Luck, I Guess and Ten Pin. No tracker confirms their unlock method yet, so this guide gives their descriptions only and invents no method.</p>
+  <p>Rockstar-confirmed facts used here: released 19 November 2026 on PlayStation 5 and Xbox Series X|S only (no PC version announced); set in the state of Leonida including Vice City; protagonists Jason Duval and Lucia Caminos; six regions: Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga; single-player. There is no GTA Online at launch and no official trophy list from Rockstar.</p>
+  <p>Warning: cheats disable trophies and saving, according to PowerPyx. There is no mission replay, so keep manual saves at the start of each chapter.</p>
+  <p class="fine">Progress is saved only in this browser (localStorage). Export it to keep a backup. This is an unofficial fan guide, not affiliated with Rockstar Games.</p>
+</footer>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
