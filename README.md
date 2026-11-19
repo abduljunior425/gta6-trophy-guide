@@ -4,24 +4,24 @@
 [![rank](https://make.fun/badge/gta6-trophy-guide-01/abduljunior425/gta6-trophy-guide/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 [![reward](https://make.fun/badge/gta6-trophy-guide-01/abduljunior425/gta6-trophy-guide/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 
-An offline web app that guides and tracks all 55 PlayStation 5 trophies of Grand Theft Auto VI: a saved checklist with export and import, filters by kind, a spoiler mode, a platinum roadmap, and a step-by-step guide for every trophy that cites its sources. An entry for the [make.fun bounty](https://make.fun/bounty/gta6-trophy-guide-01).
+An offline web app for tracking and earning every PlayStation 5 trophy in Grand Theft Auto VI: a checklist that saves your progress, filters by kind and grade, a spoiler mode that masks secret trophies, a platinum roadmap, and a step-by-step guide for each trophy with its sources cited. An entry for the [make.fun bounty](https://make.fun/bounty/gta6-trophy-guide-01).
 
 ## What it does
 
-- **Tracker** (`app/src/tracker.js`): tick trophies off and the checklist saves in localStorage, with a progress bar and percentage. `exportProgress()` downloads the progress as JSON; `importProgressFile()` reads it back.
-- **Filters** (`app/src/filters.js`): filter by kind — story, missable, collectibles, activities, online — plus grade, text search and earned-only. There are no online trophies (all 55 are single-player), so the online filter shows an empty-state note by design.
-- **Spoiler mode** (`app/src/spoiler.js`): `applySpoilerMask()` hides the names and descriptions of the 28 secret trophies until they are earned.
-- **Trophy detail** (`app/src/detail.js`): click any card for the official name and description, grade, step-by-step guide and cited source, with missable and unconfirmed flags.
-- **Roadmap** (`app/src/roadmap.js`): three steps to the Platinum — story first (60–80 hours, 5 chapters), the 100% checklist next (Progress > Stats > 100% Completion), grind trophies last (~200 hours total per PowerPyx) — with the missable trophy flagged and the 100% checklist counts in a table.
+- **Tracker** (`app/src/tracker.js`): tick trophies off and the checklist saves in localStorage, with a progress bar and percentage. Progress can be exported to a JSON file and imported back.
+- **Filters** (`app/src/filters.js`): narrow the list by kind — story, missable, collectibles, activities, online — plus grade, text search and earned-only. There are no online trophies (all 55 are single-player), so the online filter shows an empty-state note by design.
+- **Spoiler mode** (`app/src/spoiler.js`): hides the names and descriptions of the 28 secret trophies until they are earned, so story beats stay hidden while you play.
+- **Trophy detail** (`app/src/detail.js`): click any card for the official name and description, its grade, a step-by-step guide and the cited source, with missable and unconfirmed flags shown.
+- **Roadmap** (`app/src/roadmap.js`): three steps to the Platinum — story first (60–80 hours, 5 chapters), the 100% checklist next (Progress > Stats > 100% Completion), grind trophies last (about 200 hours total per PowerPyx) — with the missable trophy flagged and the 100% checklist counts in a table.
 - **The list** (`app/data/trophies.json`): exactly 55 trophies — 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden, 27 visible, 0 online.
 
 ## Trophy sources and accuracy
 
-Trophy names, descriptions and grades as published by Exophase, PowerPyx, GTABase and PSNProfiles; Rockstar has published no official trophy list. Names and descriptions were cross-checked between PowerPyx's trophy guide and Push Square's trophy guide (both 18 November 2026), with Exophase via PlanetGTA6 and PSNProfiles counts as a second check. The guides are written in the author's own words and cite their sources; they do not copy guide text.
+Trophy names, descriptions and grades come from the list published on Exophase and mirrored by PlanetGTA6, cross-checked against PSNProfiles and TrueAchievements; Rockstar has published no official trophy list. Names and descriptions were compared with PowerPyx's trophy guide and Push Square's trophy guide (both from 18 November 2026). The guide text is written in the author's own words and cites its sources; it does not copy guide text from other sites.
 
-Two things to know:
+Three things to know:
 
-- **Unconfirmed secrets:** as of 19 November 2026, no tracker confirms how **Bad Luck, I Guess** or **Ten Pin** unlock. PowerPyx lists both as currently unknown (the first believed to relate to the Payday Loans store from the prologue, the second believed to involve kicking enemies from a motorcycle). This guide gives their descriptions only and invents no method. PowerPyx has since confirmed the UFO method for The Truth Is Out There, so that one has a full guide.
+- **Unconfirmed secrets:** as of 19 November 2026, no tracker confirms how **Bad Luck, I Guess** or **Ten Pin** unlock. PowerPyx lists both as currently unknown — the first is believed to relate to the Payday Loans store from the prologue, the second is believed to involve kicking enemies from a motorcycle. This guide gives their descriptions only and invents no method. PowerPyx has since confirmed the UFO method for The Truth Is Out There, so that one has a full guide.
 - **The one possibly-missable trophy:** **Positive Mental Attitude** (meditate at all 18 spots). PowerPyx flags the Chapter 1 balcony meditation at Jason's house — after the mission Down to Earth, Lucia meditates on the balcony, and it may be required. Push Square lists no missable trophies. The app flags it in the banner, the roadmap and the trophy's own guide.
 - **Grade note:** Maximum Withdrawal is Silver in the tracker consensus (PowerPyx, Exophase, PSNProfiles), which is what makes the split 1/2/6/46; Push Square's guide page lists it as Bronze.
 
