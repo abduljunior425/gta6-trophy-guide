@@ -13,7 +13,12 @@ export function loadEarned() {
 }
 
 export function saveEarned(earned) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify([...earned].sort((a, b) => a - b)));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...earned].sort((a, b) => a - b)));
+  } catch {
+    // Storage unavailable (private mode, full quota, or blocked): the
+    // in-memory checklist still works, it just will not persist.
+  }
 }
 
 export function toggleEarned(earned, id) {
